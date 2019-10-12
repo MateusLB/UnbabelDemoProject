@@ -1,5 +1,6 @@
 package com.mateus.batista.data_remote.util
 
+import com.mateus.batista.data.util.Response
 import retrofit2.HttpException
 import java.io.IOException
 
