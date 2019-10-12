@@ -22,6 +22,7 @@ ext {
     okhttpVersion = '4.0.1'
     urlconnectionVersion = '3.9.1'
     timberVersion = '4.7.1'
+    roomVersion = "2.2.0-beta01"
 
     //Dependencies
     commonDependencies = [
@@ -58,5 +59,12 @@ ext {
             [configuration: "implementation", dependency: "com.squareup.okhttp3:okhttp:$okhttpVersion"],
             [configuration: "implementation", dependency: "com.squareup.okhttp3:okhttp-urlconnection:$urlconnectionVersion"],
             [configuration: "implementation", dependency: "com.jakewharton.timber:timber:$timberVersion"]
+    ]
+
+    dataCacheDependencies = commonDependencies + [
+            [configuration: "implementation", dependency: "androidx.room:room-runtime:$roomVersion"],
+            [configuration: "annotationProcessor", dependency: "androidx.room:room-compiler:$roomVersion"],
+            [configuration: "implementation", dependency: "androidx.room:room-ktx:$roomVersion"],
+            [configuration: "testImplementation", dependency: "androidx.room:room-testing:$roomVersion"]
     ]
 }
