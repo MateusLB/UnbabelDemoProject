@@ -1,0 +1,2 @@
+include ':app', ':data', ':data_remote', ':domain'
+rootProject.name='Unbabel Demo Project'
