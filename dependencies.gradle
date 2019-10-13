@@ -14,6 +14,7 @@ ext {
     coreKtxVersion = '1.1.0'
     contraintLayoutVersion = '1.1.3'
     junitVersion = '4.12'
+    junitExtVersion = '1.1.1'
     testRunnerVersion = '1.2.0'
     espressoVersion = '3.2.0'
     koinVersion = '2.0.1'
@@ -63,8 +64,10 @@ ext {
 
     dataCacheDependencies = commonDependencies + [
             [configuration: "implementation", dependency: "androidx.room:room-runtime:$roomVersion"],
-            [configuration: "annotationProcessor", dependency: "androidx.room:room-compiler:$roomVersion"],
+            [configuration: "kapt", dependency: "androidx.room:room-compiler:$roomVersion"],
             [configuration: "implementation", dependency: "androidx.room:room-ktx:$roomVersion"],
-            [configuration: "testImplementation", dependency: "androidx.room:room-testing:$roomVersion"]
+            [configuration: "testImplementation", dependency: "androidx.room:room-testing:$roomVersion"],
+            [configuration: "androidTestImplementation", dependency: "androidx.test.ext:junit:$junitExtVersion"],
+            [configuration: "androidTestImplementation", dependency: "androidx.test.espresso:espresso-core:$espressoVersion"]
     ]
 }

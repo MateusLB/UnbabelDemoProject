@@ -1,5 +1,7 @@
 package com.mateus.batista.unbabeldemoproject
 
+import android.content.Context
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
@@ -18,7 +20,7 @@ class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
         // Context of the app under test.
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        val appContext = ApplicationProvider.getApplicationContext<Context>()
         assertEquals("com.mateus.batista.unbabeldemoproject", appContext.packageName)
     }
 }

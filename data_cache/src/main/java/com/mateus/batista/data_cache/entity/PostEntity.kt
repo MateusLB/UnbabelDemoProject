@@ -15,7 +15,7 @@ import androidx.room.PrimaryKey
     )]
 )
 data class PostEntity(
-    @PrimaryKey val id: Long,
+    @PrimaryKey(autoGenerate = false) val id: Long,
     @ColumnInfo(name = "user_id") val userId: Long,
     val title: String,
     val body: String

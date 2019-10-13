@@ -16,7 +16,7 @@ import androidx.room.PrimaryKey
     )]
 )
 data class CommentEntity(
-    @PrimaryKey val id: Long,
+    @PrimaryKey(autoGenerate = false) val id: Long,
     @ColumnInfo(name = "post_id") val postId: Long,
     val name: String,
     val email: String,

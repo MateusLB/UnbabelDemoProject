@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion androidCompileSdkVersion
@@ -9,6 +10,9 @@ android {
     defaultConfig {
         minSdkVersion androidMinSdkVersion
         targetSdkVersion androidTargetSdkVersion
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {
@@ -21,6 +25,8 @@ android {
 }
 
 dependencies {
-    dataCacheDependencies.each { add(it.configuration, it.dependency, it.options) }
+    dataCacheDependencies.each {add(it.configuration, it.dependency, it.options)}
     implementation project(':data')
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }

@@ -8,15 +8,15 @@ import androidx.room.Update
 interface BaseDao<T> {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(obj : T) : Long
+    suspend fun insert(obj: T): Long
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(vararg obj : T)
+    suspend fun insertAll(obj: List<T>)
 
     @Update
-    suspend fun update(obj : T)
+    suspend fun update(obj: T)
 
     @Delete
-    suspend fun delete(obj : T)
+    suspend fun delete(obj: T)
 
 }
