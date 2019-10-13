@@ -3,7 +3,7 @@ package com.mateus.batista.data_remote.core
 import com.mateus.batista.data.model.CommentModel
 import com.mateus.batista.data.model.PostModel
 import com.mateus.batista.data.model.UserModel
-import com.mateus.batista.data.repository.PostRemoteDataSource
+import com.mateus.batista.data.source.PostRemoteDataSource
 import com.mateus.batista.data_remote.mapper.CommentMapper
 import com.mateus.batista.data_remote.mapper.PostMapper
 import com.mateus.batista.data_remote.mapper.UserMapper

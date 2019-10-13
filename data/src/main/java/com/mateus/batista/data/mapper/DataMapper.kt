@@ -1,6 +1,6 @@
 package com.mateus.batista.data.mapper
 
-interface DataMapper<E, D> {
-    fun toDomain(data: E): D
-    fun toData(data: D): E
+interface DataMapper<M, D> {
+    fun toDomain(data: M): D
+    fun fromData(data: D): M
 }

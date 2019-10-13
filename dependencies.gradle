@@ -24,6 +24,7 @@ ext {
     urlconnectionVersion = '3.9.1'
     timberVersion = '4.7.1'
     roomVersion = "2.2.0-beta01"
+    viewModelVersion = '2.0.0'
 
     //Dependencies
     commonDependencies = [
@@ -47,6 +48,11 @@ ext {
             [configuration: "implementation", dependency: "androidx.constraintlayout:constraintlayout:$contraintLayoutVersion"],
             [configuration: "androidTestImplementation", dependency: "androidx.test:runner:$testRunnerVersion"],
             [configuration: "androidTestImplementation", dependency: "androidx.test.espresso:espresso-core:$espressoVersion"]
+    ]
+
+    baseFeatureDependencies = commonDependencies + [
+            [configuration: "implementation", dependency: "androidx.lifecycle:lifecycle-extensions:$viewModelVersion"]
+
     ]
 
     domainDependencies = commonDependencies + []

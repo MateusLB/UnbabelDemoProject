@@ -1,6 +1,6 @@
 package com.mateus.batista.data_remote
 
-import com.mateus.batista.data.repository.PostRemoteDataSource
+import com.mateus.batista.data.source.PostRemoteDataSource
 import com.mateus.batista.data_remote.core.PostRemoteDataSourceImp
 import com.mateus.batista.data_remote.mapper.CommentMapper
 import com.mateus.batista.data_remote.mapper.PostMapper

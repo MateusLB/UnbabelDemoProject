@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Unbabel Demo Project.iml" filepath="$PROJECT_DIR$/Unbabel Demo Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base_feature/base_feature.iml" filepath="$PROJECT_DIR$/base_feature/base_feature.iml" />
       <module fileurl="file://$PROJECT_DIR$/data/data.iml" filepath="$PROJECT_DIR$/data/data.iml" />
       <module fileurl="file://$PROJECT_DIR$/data_cache/data_cache.iml" filepath="$PROJECT_DIR$/data_cache/data_cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/data_remote/data_remote.iml" filepath="$PROJECT_DIR$/data_remote/data_remote.iml" />

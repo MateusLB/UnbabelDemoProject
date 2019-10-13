@@ -3,7 +3,7 @@ package com.mateus.batista.data_cache.core
 import com.mateus.batista.data.model.CommentModel
 import com.mateus.batista.data.model.PostModel
 import com.mateus.batista.data.model.UserModel
-import com.mateus.batista.data.repository.PostCacheDataSource
+import com.mateus.batista.data.source.PostCacheDataSource
 import com.mateus.batista.data_cache.dao.CommentDao
 import com.mateus.batista.data_cache.dao.PostDao
 import com.mateus.batista.data_cache.dao.UserDao

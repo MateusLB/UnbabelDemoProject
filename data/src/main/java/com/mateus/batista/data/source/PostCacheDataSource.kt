@@ -1,4 +1,4 @@
-package com.mateus.batista.data.repository
+package com.mateus.batista.data.source
 
 import com.mateus.batista.data.model.CommentModel
 import com.mateus.batista.data.model.PostModel
