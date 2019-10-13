@@ -25,4 +25,5 @@ android {
 
 dependencies {
     baseFeatureDependencies.each {add(it.configuration, it.dependency, it.options)}
+    implementation project(':domain')
 }

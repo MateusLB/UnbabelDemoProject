@@ -25,6 +25,10 @@ ext {
     timberVersion = '4.7.1'
     roomVersion = "2.2.0-beta01"
     viewModelVersion = '2.0.0'
+    navVersion = '2.2.0-alpha01'
+    ktxVersion = '1.2.0-alpha01'
+    meterialVersion = '1.0.0'
+    recyclerviewVersion = '1.0.0'
 
     //Dependencies
     commonDependencies = [
@@ -44,6 +48,7 @@ ext {
 
     appDependencies = commonDependencies + [
             [configuration: "implementation", dependency: "androidx.appcompat:appcompat:$appcompatVersion"],
+            [configuration: "implementation", dependency: "com.android.support:design:$androidBuildToolsVersion"],
             [configuration: "implementation", dependency: "androidx.core:core-ktx:$coreKtxVersion"],
             [configuration: "implementation", dependency: "androidx.constraintlayout:constraintlayout:$contraintLayoutVersion"],
             [configuration: "androidTestImplementation", dependency: "androidx.test:runner:$testRunnerVersion"],
@@ -51,7 +56,15 @@ ext {
     ]
 
     baseFeatureDependencies = commonDependencies + [
-            [configuration: "implementation", dependency: "androidx.lifecycle:lifecycle-extensions:$viewModelVersion"]
+            [configuration: "implementation", dependency: "androidx.appcompat:appcompat:$appcompatVersion"],
+            [configuration: "implementation", dependency: "androidx.core:core-ktx:$coreKtxVersion"],
+            [configuration: "implementation", dependency: "androidx.lifecycle:lifecycle-extensions:$viewModelVersion"],
+            [configuration: "implementation", dependency: "androidx.navigation:navigation-fragment-ktx:$navVersion"],
+            [configuration: "implementation", dependency: "androidx.core:core-ktx:$ktxVersion"],
+            [configuration: "implementation", dependency: "androidx.constraintlayout:constraintlayout:$contraintLayoutVersion"],
+            [configuration: "implementation", dependency: "com.google.android.material:material:$meterialVersion"],
+            [configuration: "implementation", dependency: "androidx.recyclerview:recyclerview:$recyclerviewVersion"],
+            [configuration: "implementation", dependency: "com.android.support:design:$androidBuildToolsVersion"],
 
     ]
 

@@ -1,4 +1,6 @@
 package com.mateus.batista.base_feature
 
-open class BaseViewModel {
-}
+import androidx.lifecycle.ViewModel
+import org.koin.core.KoinComponent
+
+open class BaseViewModel : ViewModel(), KoinComponent
