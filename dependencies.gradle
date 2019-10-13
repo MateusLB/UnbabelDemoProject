@@ -50,9 +50,14 @@ ext {
             [configuration: "implementation", dependency: "androidx.appcompat:appcompat:$appcompatVersion"],
             [configuration: "implementation", dependency: "com.android.support:design:$androidBuildToolsVersion"],
             [configuration: "implementation", dependency: "androidx.core:core-ktx:$coreKtxVersion"],
+            [configuration: "implementation", dependency: "androidx.lifecycle:lifecycle-extensions:$viewModelVersion"],
+            [configuration: "implementation", dependency: "androidx.navigation:navigation-fragment-ktx:$navVersion"],
+            [configuration: "implementation", dependency: "androidx.navigation:navigation-ui-ktx:$navVersion"],
+            [configuration: "implementation", dependency: "androidx.core:core-ktx:$ktxVersion"],
             [configuration: "implementation", dependency: "androidx.constraintlayout:constraintlayout:$contraintLayoutVersion"],
             [configuration: "androidTestImplementation", dependency: "androidx.test:runner:$testRunnerVersion"],
-            [configuration: "androidTestImplementation", dependency: "androidx.test.espresso:espresso-core:$espressoVersion"]
+            [configuration: "androidTestImplementation", dependency: "androidx.test.espresso:espresso-core:$espressoVersion"],
+            [configuration: "androidTestImplementation", dependency: "androidx.test.ext:junit:$junitExtVersion"]
     ]
 
     baseFeatureDependencies = commonDependencies + [
@@ -60,6 +65,7 @@ ext {
             [configuration: "implementation", dependency: "androidx.core:core-ktx:$coreKtxVersion"],
             [configuration: "implementation", dependency: "androidx.lifecycle:lifecycle-extensions:$viewModelVersion"],
             [configuration: "implementation", dependency: "androidx.navigation:navigation-fragment-ktx:$navVersion"],
+            [configuration: "implementation", dependency: "androidx.navigation:navigation-ui-ktx:$navVersion"],
             [configuration: "implementation", dependency: "androidx.core:core-ktx:$ktxVersion"],
             [configuration: "implementation", dependency: "androidx.constraintlayout:constraintlayout:$contraintLayoutVersion"],
             [configuration: "implementation", dependency: "com.google.android.material:material:$meterialVersion"],
@@ -75,9 +81,9 @@ ext {
     dataRemoteDependencies = commonDependencies + [
             [configuration: "implementation", dependency: "com.squareup.retrofit2:retrofit:$retrofitVersion"],
             [configuration: "implementation", dependency: "com.squareup.retrofit2:converter-gson:$retrofitVersion"],
-            [configuration: "implementation", dependency: "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"],
-            [configuration: "implementation", dependency: "com.squareup.okhttp3:okhttp:$okhttpVersion"],
-            [configuration: "implementation", dependency: "com.squareup.okhttp3:okhttp-urlconnection:$urlconnectionVersion"],
+            [configuration: "api", dependency: "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"],
+            [configuration: "api", dependency: "com.squareup.okhttp3:okhttp:$okhttpVersion"],
+            [configuration: "api", dependency: "com.squareup.okhttp3:okhttp-urlconnection:$urlconnectionVersion"],
             [configuration: "implementation", dependency: "com.jakewharton.timber:timber:$timberVersion"]
     ]
 
