@@ -96,5 +96,5 @@ ext {
             [configuration: "androidTestImplementation", dependency: "androidx.test.espresso:espresso-core:$espressoVersion"]
     ]
 
-    postFeatureDependencies = commonDependencies + baseFeatureDependencies + []
+    postFeatureDependencies = baseFeatureDependencies + []
 }

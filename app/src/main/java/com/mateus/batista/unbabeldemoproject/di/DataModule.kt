@@ -1,12 +1,14 @@
 package com.mateus.batista.unbabeldemoproject.di
 
 import com.mateus.batista.data.repository.PostRepositoryImp
+import com.mateus.batista.data.source.PostCacheDataSource
 import com.mateus.batista.data.source.PostRemoteDataSource
 import com.mateus.batista.data_cache.core.PostCacheDataSourceImp
 import com.mateus.batista.data_cache.database.DatabaseFactory
 import com.mateus.batista.data_remote.core.PostRemoteDataSourceImp
 import com.mateus.batista.data_remote.service.RequestInterceptor
 import com.mateus.batista.data_remote.service.ServiceFactory
+import com.mateus.batista.domain.repository.PostRepository
 import com.mateus.batista.unbabeldemoproject.di.Constants.BASE_RUL
 import org.koin.android.BuildConfig
 import org.koin.android.ext.koin.androidApplication
@@ -18,7 +20,7 @@ object Constants {
 }
 
 val dataModule = module {
-    factory { PostRepositoryImp(get(), get()) }
+    factory { PostRepositoryImp(get(), get()) as PostRepository }
 }
 
 val remoteModule = module {
@@ -33,7 +35,7 @@ val serviceModule = module {
 }
 
 val cacheModule = module {
-    factory { PostCacheDataSourceImp(get(), get(), get()) }
+    factory { PostCacheDataSourceImp(get(), get(), get()) as PostCacheDataSource }
 }
 
 val databaseModule = module {

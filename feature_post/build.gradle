@@ -29,5 +29,6 @@ android {
 dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     postFeatureDependencies.each { add(it.configuration, it.dependency, it.options) }
-    api project(path: ':base_feature')
+    implementation project(':base_feature')
+    implementation project(':domain')
 }
