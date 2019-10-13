@@ -1,4 +1,4 @@
-package com.mateus.batista.domain.core
+package com.mateus.batista.domain.util
 
 sealed class Response<out D> {
     class Success<D>(val data: D) : Response<D>()

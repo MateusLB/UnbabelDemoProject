@@ -3,7 +3,7 @@ package com.mateus.batista.data.repository
 import com.mateus.batista.data.mapper.PostMapper
 import com.mateus.batista.data.source.PostCacheDataSource
 import com.mateus.batista.data.source.PostRemoteDataSource
-import com.mateus.batista.domain.core.Response
+import com.mateus.batista.domain.util.Response
 import com.mateus.batista.domain.model.Post
 import com.mateus.batista.domain.repository.PostRepository
 import org.koin.core.KoinComponent

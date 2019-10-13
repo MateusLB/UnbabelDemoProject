@@ -1,6 +1,6 @@
 package com.mateus.batista.domain.repository
 
-import com.mateus.batista.domain.core.Response
+import com.mateus.batista.domain.util.Response
 import com.mateus.batista.domain.model.Post
 
 interface PostRepository {
