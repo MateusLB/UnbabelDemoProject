@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/data_cache/data_cache.iml" filepath="$PROJECT_DIR$/data_cache/data_cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/data_remote/data_remote.iml" filepath="$PROJECT_DIR$/data_remote/data_remote.iml" />
       <module fileurl="file://$PROJECT_DIR$/domain/domain.iml" filepath="$PROJECT_DIR$/domain/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feature_post/feature_post.iml" filepath="$PROJECT_DIR$/feature_post/feature_post.iml" />
     </modules>
   </component>
 </project>

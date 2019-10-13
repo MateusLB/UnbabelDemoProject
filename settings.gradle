@@ -1,2 +1,2 @@
-include ':app', ':data', ':data_remote', ':domain', ':data_cache', ':base_feature'
+include ':app', ':data', ':data_remote', ':domain', ':data_cache', ':base_feature', ':feature_post'
 rootProject.name='Unbabel Demo Project'

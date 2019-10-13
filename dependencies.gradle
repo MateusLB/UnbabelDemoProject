@@ -89,4 +89,6 @@ ext {
             [configuration: "androidTestImplementation", dependency: "androidx.test.ext:junit:$junitExtVersion"],
             [configuration: "androidTestImplementation", dependency: "androidx.test.espresso:espresso-core:$espressoVersion"]
     ]
+
+    postFeatureDependencies = commonDependencies + baseFeatureDependencies + []
 }
