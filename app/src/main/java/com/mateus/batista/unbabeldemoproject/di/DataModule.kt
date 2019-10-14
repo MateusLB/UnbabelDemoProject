@@ -3,6 +3,7 @@ package com.mateus.batista.unbabeldemoproject.di
 import com.mateus.batista.data.repository.PostRepositoryImp
 import com.mateus.batista.data.source.PostCacheDataSource
 import com.mateus.batista.data.source.PostRemoteDataSource
+import com.mateus.batista.data.util.NetworkStatus
 import com.mateus.batista.data_cache.core.PostCacheDataSourceImp
 import com.mateus.batista.data_cache.database.DatabaseFactory
 import com.mateus.batista.data_remote.core.PostRemoteDataSourceImp
@@ -21,6 +22,7 @@ object Constants {
 
 val dataModule = module {
     factory { PostRepositoryImp(get(), get()) as PostRepository }
+    factory { NetworkStatus() }
 }
 
 val remoteModule = module {

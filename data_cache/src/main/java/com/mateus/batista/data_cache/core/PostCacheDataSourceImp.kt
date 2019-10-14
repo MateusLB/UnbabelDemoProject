@@ -30,8 +30,8 @@ class PostCacheDataSourceImp(
         userDao.insertAll(users.map { UserMapper.fromData(it) })
     }
 
-    override suspend fun getUserByPostId(postId: Long): UserModel {
-        return UserMapper.toData(userDao.getUserById(postId))
+    override suspend fun getUserById(id: Long): UserModel {
+        return UserMapper.toData(userDao.getUserById(id))
     }
 
     override suspend fun getCommentsByPostId(postId: Long): List<CommentModel> {

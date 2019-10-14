@@ -43,7 +43,7 @@ class DetailPostUseCaseTest : KoinTest {
 
     @Test
     fun `DetailPostUseCase when pass valid params must call repository`() = runBlocking<Unit> {
-        val dummyPost = Post(1,1,"","")
+        val dummyPost = Post(1,"","","", 0)
         stubRepositorySuccess(dummyPost)
 
         useCase.run(DetailPostUseCase.Params(1))
@@ -58,7 +58,7 @@ class DetailPostUseCaseTest : KoinTest {
 
     @Test
     fun `DetailPostUseCase return a Success response`() = runBlocking {
-        val dummyPost = Post(1,1,"","")
+        val dummyPost = Post(1,"","","", 0)
         stubRepositorySuccess(dummyPost)
 
         val response = useCase.run(DetailPostUseCase.Params(1))

@@ -4,5 +4,7 @@
     <string name="description">Description :</string>
     <string name="number_comments">Number of comments :</string>
     <string name="no_data">No data saved, use Internet to retrieve data.</string>
+    <string name="list_title">Posts</string>
+    <string name="detail_title">Post Detail</string>
 
 </resources>

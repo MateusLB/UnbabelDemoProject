@@ -92,11 +92,11 @@ class PostCacheDataSourceTest : KoinTest {
     }
 
     @Test
-    fun `getUserByPostId must return right mapped value`() = runBlocking {
+    fun `getUserById must return right mapped value`() = runBlocking {
         val dummyUser = UserEntity(1, "", "", "")
         stubUser(dummyUser)
 
-        val result = postCacheDataSource.getUserByPostId(1)
+        val result = postCacheDataSource.getUserById(1)
         assertEquals(result, UserMapper.toData(dummyUser))
     }
 

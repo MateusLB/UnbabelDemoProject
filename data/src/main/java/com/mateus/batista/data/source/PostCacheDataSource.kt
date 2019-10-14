@@ -12,7 +12,7 @@ interface PostCacheDataSource {
 
     suspend fun insertAllUsers(users: List<UserModel>)
 
-    suspend fun getUserByPostId(postId: Long) : UserModel
+    suspend fun getUserById(id: Long) : UserModel
 
     suspend fun getCommentsByPostId(postId: Long) : List<CommentModel>
 

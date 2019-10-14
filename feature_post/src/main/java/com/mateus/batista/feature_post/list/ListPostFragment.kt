@@ -41,6 +41,7 @@ class ListPostFragment : BaseFragment(), OnItemClickListener<ListPost> {
             loading = { progressBar.visibility = View.VISIBLE },
             success = {
                 progressBar.visibility = View.GONE
+                setNoData(it.isNotEmpty())
                 adapter = PostAdapter(it, this)
                 recycleView.adapter = adapter
             },
@@ -48,6 +49,16 @@ class ListPostFragment : BaseFragment(), OnItemClickListener<ListPost> {
                 progressBar.visibility = View.GONE
                 handleErrors(it) { viewModel.getPosts() }
             })
+    }
+
+    private fun setNoData(hasData: Boolean) {
+        if (hasData) {
+            noData.visibility = View.GONE
+            recycleView.visibility = View.VISIBLE
+        } else {
+            noData.visibility = View.VISIBLE
+            recycleView.visibility = View.GONE
+        }
     }
 
     override fun onItemClick(item: ListPost, position: Int) {
