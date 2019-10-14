@@ -100,8 +100,21 @@ class PostCacheDataSourceTest : KoinTest {
         assertEquals(result, UserMapper.toData(dummyUser))
     }
 
+    @Test
+    fun `getPostById must return right mapped value`() = runBlocking {
+        val dummyPost = PostEntity(3,1,"","")
+        stubPost(dummyPost)
+
+        val result = postCacheDataSource.getPostById(3)
+        assertEquals(result, PostMapper.toData(dummyPost))
+    }
+
     private suspend fun stubPosts(posts: List<PostEntity>) {
         whenever(postDao.getAllPost()).thenReturn(posts)
+    }
+
+    private suspend fun stubPost(post : PostEntity) {
+        whenever(postDao.getPostById(any())).thenReturn(post)
     }
 
     private suspend fun stubUser(user: UserEntity) {

@@ -9,4 +9,7 @@ abstract class PostDao : BaseDao<PostEntity> {
 
     @Query("SELECT * FROM post")
     abstract suspend fun getAllPost(): List<PostEntity>
+
+    @Query("SELECT * FROM post WHERE id=:id")
+    abstract suspend fun getPostById(id : Long) : PostEntity
 }

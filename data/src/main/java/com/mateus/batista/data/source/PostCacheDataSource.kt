@@ -17,4 +17,6 @@ interface PostCacheDataSource {
     suspend fun getCommentsByPostId(postId: Long) : List<CommentModel>
 
     suspend fun getPosts() : List<PostModel>
+
+    suspend fun getPostById(id: Long) : PostModel
 }

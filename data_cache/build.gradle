@@ -28,3 +28,6 @@ dependencies {
     dataCacheDependencies.each {add(it.configuration, it.dependency, it.options)}
     implementation project(':data')
 }
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

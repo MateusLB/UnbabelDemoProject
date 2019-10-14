@@ -2,18 +2,16 @@ package com.mateus.batista.feature_post.list
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.mateus.batista.base_feature.BaseFragment
 import com.mateus.batista.base_feature.listeners.OnItemClickListener
 import com.mateus.batista.base_feature.util.observeEvent
-import org.koin.androidx.viewmodel.ext.android.viewModel
-
 import com.mateus.batista.feature_post.R
 import com.mateus.batista.feature_post.model.ListPost
 import kotlinx.android.synthetic.main.fragment_list_post.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class ListPostFragment : BaseFragment(), OnItemClickListener<ListPost> {
@@ -25,7 +23,6 @@ class ListPostFragment : BaseFragment(), OnItemClickListener<ListPost> {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_list_post, container, false)
     }
 
@@ -54,6 +51,10 @@ class ListPostFragment : BaseFragment(), OnItemClickListener<ListPost> {
     }
 
     override fun onItemClick(item: ListPost, position: Int) {
-        navController.navigate(ListPostFragmentDirections.actionListPostFragmentToDetailPostFragment(item.id))
+        navController.navigate(
+            ListPostFragmentDirections.actionListPostFragmentToDetailPostFragment(
+                item.id
+            )
+        )
     }
 }

@@ -1,5 +1,6 @@
 package com.mateus.batista.base_feature.util
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
@@ -26,7 +27,7 @@ class ErrorDialogFragment : DialogFragment() {
         ok = view?.findViewById(R.id.ok)
         cancel = view?.findViewById(R.id.cancel)
         title = view?.findViewById(R.id.title)
-        description = view?.findViewById(R.id.description)
+        description = view?.findViewById(R.id.descriptionText)
 
         val alertDialog = AlertDialog.Builder(activity)
         alertDialog.setView(view)

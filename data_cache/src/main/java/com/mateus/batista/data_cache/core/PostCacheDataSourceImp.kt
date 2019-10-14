@@ -41,4 +41,8 @@ class PostCacheDataSourceImp(
     override suspend fun getPosts(): List<PostModel> {
         return postDao.getAllPost().map { PostMapper.toData(it) }
     }
+
+    override suspend fun getPostById(id: Long): PostModel {
+        return PostMapper.toData(postDao.getPostById(id))
+    }
 }

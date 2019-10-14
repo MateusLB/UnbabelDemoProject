@@ -18,6 +18,17 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_post" />
 
+    <TextView
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/no_data"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
     <include
         android:id="@+id/progressBar"
         layout="@layout/partial_progress_bar"

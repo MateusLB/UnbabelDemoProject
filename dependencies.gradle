@@ -29,6 +29,8 @@ ext {
     ktxVersion = '1.2.0-alpha01'
     meterialVersion = '1.0.0'
     recyclerviewVersion = '1.0.0'
+    coreTestingVersion = '2.0.0'
+    mockkVersion = '1.9'
 
     //Dependencies
     commonDependencies = [
@@ -96,5 +98,8 @@ ext {
             [configuration: "androidTestImplementation", dependency: "androidx.test.espresso:espresso-core:$espressoVersion"]
     ]
 
-    postFeatureDependencies = baseFeatureDependencies + []
+    postFeatureDependencies = baseFeatureDependencies + [
+            [configuration: "implementation", dependency: "androidx.arch.core:core-testing:$coreTestingVersion"],
+            [configuration: "testImplementation", dependency: "io.mockk:mockk:$mockkVersion"]
+    ]
 }

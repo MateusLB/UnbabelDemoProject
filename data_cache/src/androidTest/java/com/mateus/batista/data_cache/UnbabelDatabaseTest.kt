@@ -62,7 +62,6 @@ class UnbabelDatabaseTest {
         userDao.insert(dummyUser)
         postDao.insertAll(listOf(dummyPost))
         val postFromDb = postDao.getAllPost()
-
         Assert.assertEquals(postFromDb, listOf(dummyPost))
     }
 
@@ -74,5 +73,14 @@ class UnbabelDatabaseTest {
         commentDao.insertAll(listOf(dummyComment))
         val commentFromDb = commentDao.getAllCommentById(1)
         Assert.assertEquals(commentFromDb, listOf(dummyComment))
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun checkGetPostId() = runBlocking {
+        userDao.insert(dummyUser)
+        postDao.insertAll(listOf(dummyPost))
+        val postFromDb = postDao.getPostById(dummyPost.id)
+        Assert.assertEquals(postFromDb, dummyPost)
     }
 }
